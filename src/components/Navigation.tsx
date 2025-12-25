@@ -24,10 +24,10 @@ export const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div className="text-xl font-bold gradient-text">
-            Portfolio
+            Ioan Dan
           </div>
           <div className="hidden md:flex space-x-8">
-            {['about', 'projects'].map((item) => (
+            {['projects'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}

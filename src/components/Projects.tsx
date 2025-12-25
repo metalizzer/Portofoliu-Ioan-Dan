@@ -10,6 +10,14 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "Haip - Game Playtesting Platform",
+      description: "Complete website transformation from template to production-ready website: Rebranded logo, colors, fonts. Built custom case studies carousel with navigation, implemented animated testimonials system with infinite scroll. Created admin panels for content management, redesigned How It Works section with diagonal layout and custom cards. Added Analytics tracking and privacy compliance (cookie policy). Implemented professional booking system. Updated all contact info and social links. Fixed mobile responsiveness issues, and optimized typography across all breakpoints.",
+      github: "#",
+      live: "https://haip.space",
+      image: "🎮",
+      logo: "/Haip black logo copy.png"
+    },
+    {
       title: "Custom Wine Tasting Form",
       description: "Developed a dynamic wine tasting form that tailors input fields to each wine's unique attributes, stored in a database. This fullstack application enhances user engagement by providing a seamless, intuitive interface for wine enthusiasts and event organizers to record tasting notes. Developed the admin interface and report generation logic for a dynamic wine tasting form, enabling seamless management of wine data and insightful analytics for event organizers. Collaborated with a partner who built the user-facing frontend, ensuring smooth integration between back-end systems and an engaging user experience.",
       github: "#",
@@ -35,12 +43,22 @@ export const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={project.title} className="space-y-4">
-              <Card 
+              <Card
                 className="gradient-border overflow-hidden hover:scale-105 transition-transform duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <CardHeader>
-                  <div className="text-6xl mb-4 text-center">{project.image}</div>
+                  <div className="mb-4 text-center flex items-center justify-center" style={{ minHeight: '80px' }}>
+                    {project.logo ? (
+                      <img
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        className="h-16 w-auto object-contain"
+                      />
+                    ) : (
+                      <div className="text-6xl">{project.image}</div>
+                    )}
+                  </div>
                   <CardTitle className="text-2xl mb-2">{project.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
