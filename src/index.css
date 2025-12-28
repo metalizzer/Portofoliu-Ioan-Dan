@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -50,8 +51,6 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    background-image: var(--hero-bg);
-    background-attachment: fixed;
   }
 
   html {
@@ -103,4 +102,27 @@
     from { box-shadow: 0 0 20px hsl(262 83% 58% / 0.2); }
     to { box-shadow: 0 0 30px hsl(262 83% 58% / 0.4), 0 0 40px hsl(213 93% 68% / 0.2); }
   }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
 }

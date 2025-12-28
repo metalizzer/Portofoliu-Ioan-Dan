@@ -60,8 +60,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'Monaco', 'monospace'],
+				sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+				mono: ['IBM Plex Mono', 'Monaco', 'monospace'],
 			},
 			keyframes: {
 				'accordion-down': {
