@@ -183,7 +183,7 @@ export const Projects = () => {
                 }}
               >
                 {/* Expanding circles for this project */}
-                <div className="pointer-events-none absolute inset-0" style={{ zIndex: -1 }}>
+                <div className="pointer-events-none absolute inset-0 hidden lg:block" style={{ zIndex: -1 }}>
                   <div
                     style={{
                       position: circlePosition,
@@ -249,25 +249,25 @@ export const Projects = () => {
                           <img
                             src={project.logo}
                             alt={`${project.title} logo`}
-                            className="h-10 w-auto object-contain ml-4"
+                            className="h-8 lg:h-10 w-auto object-contain ml-4"
                           />
                         )}
                       </div>
                     </CardHeader>
 
-                    <CardContent className="pt-6 pb-6">
+                    <CardContent className="pt-6 pb-6 lg:pt-6 lg:pb-6">
                       {hasScreenshots ? (
                         <div className="relative group mb-6">
                           <div className="relative aspect-video bg-secondary/30 overflow-hidden rounded-lg">
                             {currentScreenshot === -1 ? (
                               <div
                                 key={`text-${project.title}`}
-                                className="w-full h-full flex items-center justify-center p-6 animate-slide-in"
+                                className="w-full h-full flex items-center justify-center p-3 lg:p-6 animate-slide-in"
                                 style={{
                                   animation: `slideIn${direction === 'right' ? 'Right' : 'Left'} 0.4s ease-out`
                                 }}
                               >
-                                <p className="text-muted-foreground leading-relaxed text-center">
+                                <p className="text-muted-foreground leading-relaxed text-center text-sm lg:text-base">
                                   {project.description}
                                 </p>
                               </div>
@@ -314,7 +314,7 @@ export const Projects = () => {
                           </div>
                         </div>
                       ) : (
-                        <p className="text-muted-foreground mb-6 leading-relaxed">
+                        <p className="text-muted-foreground mb-6 leading-relaxed text-sm lg:text-base">
                           {project.description}
                         </p>
                       )}
